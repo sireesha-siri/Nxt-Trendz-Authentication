@@ -1,5 +1,4 @@
 import './index.css'
-import {Link} from 'react-router-dom'
 
 const Header = () => (
   <nav className="nav-header">
@@ -27,21 +26,9 @@ const Header = () => (
           alt="website logo"
         />
         <ul className="nav-menu">
-          <li>
-            <Link to="/" className="nav-menu-item">
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/products" className="nav-menu-item">
-              Products
-            </Link>
-          </li>
-          <li>
-            <Link to="/cart" className="nav-menu-item">
-              Cart
-            </Link>
-          </li>
+          <li className="nav-menu-item">Home</li>
+          <li className="nav-menu-item">Products</li>
+          <li className="nav-menu-item">Cart</li>
         </ul>
         <button type="button" className="logout-desktop-btn">
           Logout
@@ -51,37 +38,30 @@ const Header = () => (
     <div className="nav-menu-mobile">
       <ul className="nav-menu-list-mobile">
         <li className="nav-menu-item-mobile">
-          <Link to="/">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
-              alt="nav home"
-              className="nav-bar-img"
-            />
-          </Link>
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-home-icon.png"
+            alt="nav home"
+            className="nav-bar-img"
+          />
         </li>
 
         <li className="nav-menu-item-mobile">
-          <Link to="/products">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
-              alt="nav products"
-              className="nav-bar-img"
-            />
-          </Link>
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-icon.png"
+            alt="nav products"
+            className="nav-bar-img"
+          />
         </li>
 
         <li className="nav-menu-item-mobile">
-          <Link to="/cart">
-            <img
-              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
-              alt="nav cart"
-              className="nav-bar-img"
-            />
-          </Link>
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-icon.png"
+            alt="nav cart"
+            className="nav-bar-img"
+          />
         </li>
       </ul>
     </div>
   </nav>
 )
-
 export default Header

@@ -1,5 +1,4 @@
-/* Write your CSS code here */
-.Home-container {
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,19 +10,46 @@
   max-width: 1110px;
 }
 
-.Home {
+@media screen and (min-width: 768px) {
+  .home-container {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+  }
+}
+
+.home-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+@media screen and (min-width: 768px) {
+  .home-content {
+    align-items: flex-start;
+  }
+}
+
 .home-mobile-img {
   width: 206px;
 }
+
+@media screen and (min-width: 768px) {
+  .home-mobile-img {
+    display: none;
+  }
+}
+
 .home-desktop-img {
   width: 50%;
   max-width: 450px;
   margin-left: 85px;
+}
+
+@media screen and (max-width: 767px) {
+  .home-desktop-img {
+    display: none;
+  }
 }
 
 .home-heading {
@@ -35,14 +61,29 @@
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .home-heading {
+    font-size: 46px;
+    text-align: left;
+  }
+}
+
 .home-description {
   font-family: 'Roboto';
   margin-top: 36px;
   font-size: 14px;
   line-height: 28px;
   color: #64748b;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-description {
+    font-size: 18px;
+    margin-top: 0px;
+    text-align: left;
+  }
 }
 
 .shop-now-button {
@@ -50,49 +91,20 @@
   font-size: 14px;
   font-weight: 400;
   font-family: 'Roboto';
-  color: white;
+  color: #ffffff;
   border: none;
   padding-top: 12px;
   padding-bottom: 12px;
   border-radius: 6px;
   background-color: #0967d2;
   margin-top: 20px;
+  cursor: pointer;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
-  .Home-container {
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 50px;
-  }
-
-  .Home {
-    align-items: flex-start;
-  }
-
-  .home-mobile-img {
-    display: none;
-  }
-
-  .home-heading {
-    font-size: 46px;
-    text-align: left;
-  }
-
-  .home-description {
-    font-size: 18px;
-    margin-top: 0;
-    text-align: left;
-  }
-
   .shop-now-button {
     width: 150px;
     font-size: 16px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .home-desktop-img {
-    display: none;
   }
 }
